@@ -1,10 +1,9 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+function submitForm() {
+    let form = document.getElementById("myForm");
+    let formData = new FormData(form);
 
-document.querySelector('#app').innerHTML = `
-  
-`
-
-setupCounter(document.querySelector('#counter'))
+    // Exemplo de exibição dos dados no console (você pode enviá-los para um servidor aqui)
+    for (let pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+    }
+}
